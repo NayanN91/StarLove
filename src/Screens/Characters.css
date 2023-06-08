@@ -35,3 +35,9 @@
 .tesmoche {
   width: 10vh;
 }
+
+.allbuttons {
+  position: relative;
+  top: -14rem;
+  left: 1rem;
+}
