@@ -23,14 +23,14 @@ const Card = (props) => {
             }}
           ></div>
           <h2 className="name">{props.name}</h2>
-          <p className="born">naquit en: {props.born}</p>
+          <p className="born">Naissance: {props.born}</p>
         </div>
         <div className="back">
-          <h3 className="homeworld">Homeworld: {props.homeworld}</h3>
-          <p className="height">Height: {props.height}</p>
-          <p className="cyber">Cybernetics: {props.cybernetics}</p>
-          <p className="genre">Gender: {props.gender}</p>
-          <p className="espece">Species: {props.species}</p>
+          <h3 className="homeworld"> Système d'origine: {props.homeworld}</h3>
+          <p className="height"> Height: {props.height}</p>
+          <p className="cyber"> Cybernetics: {props.cybernetics}</p>
+          <p className="genre"> Gender: {props.gender}</p>
+          <p className="espece"> Species: {props.species}</p>
         </div>
       </div>
     </div>
