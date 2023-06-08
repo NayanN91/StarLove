@@ -42,8 +42,7 @@ const AuthPage = ({ Authdata, setIsLogged }) => {
         <p className="errorMessage">Erreur d&lsquo;authentification</p>
       )}
       <form onSubmit={handleSubmit}>
-        <label></label>
-        <input className="inputuser"
+          <input className="inputuser"
           type="email"
           name="email"
           value={formData.email}
@@ -52,8 +51,7 @@ const AuthPage = ({ Authdata, setIsLogged }) => {
           
         />
         <br />
-        <label></label>
-        <input className="inputuser"
+          <input className="inputuser"
           type="password"
           name="password"
           value={formData.password}
