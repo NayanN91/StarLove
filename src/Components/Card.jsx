@@ -23,7 +23,7 @@ const Card = (props) => {
             }}
           ></div>
           <h2 className="name">{props.name}</h2>
-          <p className="born">naquit en l'an: {props.born}</p>
+          <p className="born">naquit en: {props.born}</p>
         </div>
         <div className="back">
           <h3 className="homeworld">Homeworld: {props.homeworld}</h3>
