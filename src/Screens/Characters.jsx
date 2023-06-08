@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Card from "../Components/card";
+import Card from "../Components/Card";
 import "./Characters.css"
 
 
@@ -40,6 +40,7 @@ const Characters = () => {
             height={peoples[currentIndex].height}
             species={peoples[currentIndex].species}
             cybernetics={peoples[currentIndex].cybernetics}
+            born={peoples[currentIndex].born}
           />
         ) : (
           <p></p>
