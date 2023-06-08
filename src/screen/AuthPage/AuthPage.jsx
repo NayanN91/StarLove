@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./AuthPage.css";
+import { AiOutlineUser } from "react-icons/ai";
+import { RiLockPasswordFill } from "react-icons/ri";
 
 const AuthPage = ({ Authdata, setIsLogged }) => {
   const [formData, setFormData] = useState({
@@ -36,35 +38,50 @@ const AuthPage = ({ Authdata, setIsLogged }) => {
   };
 
   return (
-  
     <div className="auth-page">
       {isEror && (
         <p className="errorMessage">Erreur d&lsquo;authentification</p>
       )}
       <form onSubmit={handleSubmit}>
-        <label></label>
-        <input className="inputuser"
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="Nom d'utilisateur"
-          
-        />
+        <div className="inputContainer">
+          <AiOutlineUser className="icon" />
+          <input
+            className="inputuser"
+            type="text"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Nom d'utilisateur"
+          />
+        </div>
         <br />
-        <label></label>
-        <input className="inputuser"
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          placeholder="Mot de passe"
-        />
+        <div className="inputContainer">
+          <RiLockPasswordFill className="icon" />
+          <input
+            className="inputuser"
+            type="password"
+            name="password"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Mot de passe"
+          />
+        </div>
         <br />
-        <button type="submit">Connexion</button>
-      <br /><a>Forgot password? </a>
-    <br/>
-    </form>
+        <div className="inputContainerButton">
+          <button className="submitButton">Inscription</button>
+        </div>
+        <br />
+        <div className="inputContainerButton">
+          <button className="submitButton">Connexion</button>
+        </div>
+        <br />
+        <div className="inputContainerButton">
+          <div className="forgetPasswordContainer">
+            <a>Mot de passe oublié</a>
+          </div>
+        </div>
+        <br />
+      </form>
     </div>
   );
 };
