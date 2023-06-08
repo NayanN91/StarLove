@@ -17,7 +17,15 @@
   left: 50%;
   transform: translate(-50%);
 }
-
+.errorMessageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.errorMessageContainer p {
+  color: crimson;
+  font-size: 1.6em;
+}
 form {
   display: flex;
   flex-direction: column;

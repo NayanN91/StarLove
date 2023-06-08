@@ -40,10 +40,11 @@ const AuthPage = ({ Authdata, setIsLogged }) => {
       <div className="logo-container">
         <img src={Logo} alt="logo" />
       </div>
-      {isEror && (
-        <p className="errorMessage">Erreur d&lsquo;authentification</p>
-      )}
+      
       <form onSubmit={handleSubmit}>
+      {isEror && (
+        <div className="errorMessageContainer"><p className="errorMessage">Erreur d&lsquo;authentification</p></div>
+      )}
         <div className="inputContainer">
           {/* <AiOutlineUser className="icon" /> */}
           <input
