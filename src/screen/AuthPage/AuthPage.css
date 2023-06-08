@@ -1,0 +1,15 @@
+.inputuser {
+    background-color: #0000003b;
+    margin: 9px;
+    height: 25px;
+    border-radius: 24px;
+    width: 180px;
+}
+button {
+    border-radius: 25px;
+    height: 31px;
+    width: 180px;
+    margin-top: 8px;
+    font-size: unset;
+}
+
