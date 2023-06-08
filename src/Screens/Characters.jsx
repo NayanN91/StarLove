@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Card from "../Components/Card";
+import Card from "../Components/card";
 import "./Characters.css"
 
 
@@ -17,16 +17,16 @@ const Characters = () => {
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % peoples.length);
-    setIsFavorite(false); 
+    setIsFavorite(false);
   };
 
   const handleSecondNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % peoples.length);
-    setIsFavorite(false); 
+    setIsFavorite(false);
   };
 
   const handleFavorite = () => {
-    setIsFavorite((prevState) => !prevState); 
+    setIsFavorite((prevState) => !prevState);
   };
 
   return (
@@ -46,14 +46,17 @@ const Characters = () => {
           <p></p>
         )}
       </div>
-      <button onClick={handleNext} className="dislike-button">
-        <i className="fas fa-times"></i>
+      <button onClick={handleNext} className="Dislike-button">
+        <img className="tesmoche" src={buttonTesMoche} alt="Dislike" />{" "}
       </button>
-      <button onClick={handleFavorite} className={`favorite-button ${isFavorite ? "active" : ""}`}>
-        <i className={`fas ${isFavorite ? "fa-star" : "fa-star-o"}`}></i>
+      <button
+        onClick={handleFavorite}
+        className={`favorite-button ${isFavorite ? "active" : ""}`}
+      >
+        <img className="tesbeau" src={buttonTesMagnifique} alt="superlike" />{" "}
       </button>
       <button onClick={handleSecondNext} className="like-button">
-        <i className="fas fa-heart"></i>
+        <img className="tesbeau" src={buttonTesBeau} alt="like" />{" "}
       </button>
     </>
   );

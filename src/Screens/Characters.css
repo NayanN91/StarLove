@@ -1,8 +1,6 @@
-*{
-background-image: "";
-
+* {
+  background-image: "";
 }
-
 
 .dislike-button,
 .like-button {
@@ -12,7 +10,7 @@ background-image: "";
   cursor: pointer;
 }
 
-.dislike-button {
+.tesmoche {
   color: red;
 }
 
@@ -21,13 +19,13 @@ background-image: "";
 }
 
 .favorite-button {
-    border: none;
-    background-color: transparent;
-    font-size: 24px;
-    cursor: pointer;
-    color: #fff;
-  }
-  
-  .favorite-button.active {
-    color: yellow;
-  }
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.favorite-button.active {
+  color: yellow;
+}
