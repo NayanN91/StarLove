@@ -5,28 +5,71 @@
 
 .inscription-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+
   }
   
   form {
-    width: 300px;
+    width: 500px;
   }
-  
+ /* 
   input {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
+  }
+*/
+
+input {
+    /* Styles généraux */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    margin-bottom: 50px;
   }
   
-  button {
-    width: 100%;
+  input:focus {
+    /* Styles lorsqu'il est en focus */
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  }
+  
+  input[type="submit"] {
+    /* Styles spécifiques pour un input de type "submit" */
     background-color: #4caf50;
     color: white;
-    padding: 10px;
-    border: none;
     cursor: pointer;
   }
+  
+
+  button {
+    width: 104%;
+    background-color: #4caf50;
+    color: white;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+    transition: background-color 0.3s, color 0.3s; /* Ajout de la transition */
+    
+  }
+
+  button:hover {
+    /* Styles lorsqu'il est survolé */
+   /* background-color: #45a049;*/
+
+     /* Styles lorsqu'il est survolé */
+  background-color: #ffffff; /* Couleur de fond blanche */
+  color: #4caf50; /* Couleur du texte verte */
+  }
+
+
   
   @media (max-width: 600px) {
     /* Styles spécifiques pour les écrans de petite taille */
