@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "../Components/card";
 
 const Characters = () => {
@@ -9,7 +8,7 @@ const Characters = () => {
   useEffect(() => {
     fetch("https://miadil.github.io/starwars-api/api/all.json")
       .then((res) => res.json())
-      .then((data) => setPeoples(data));
+      .then((res) => setPeoples(res));
   }, []);
 
   const handleNext = () => {
@@ -22,7 +21,7 @@ const Characters = () => {
 
   return (
     <>
-      <div>
+      <div className="caracters-container">
         {peoples.length > 0 ? (
           <Card
             name={peoples[currentIndex].name}
@@ -36,11 +35,12 @@ const Characters = () => {
           <p></p>
         )}
       </div>
-      <button onClick={handleNext}>Next</button>
-      <button onClick={handleSecondNext}>Next (2nd)</button>
+      <button onClick={handleNext}>Dislike</button>
+      <button onClick={handleSecondNext}>Like</button>
     </>
   );
 };
 
 export default Characters;
+
         
