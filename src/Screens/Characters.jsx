@@ -41,7 +41,7 @@ const Characters = () => {
   };
 
   return (
-    <div>
+    <div className="screencharacters">
       <div
         className={`card-container ${
           isSwipeLeft ? "swipe-left transition" : ""
