@@ -46,7 +46,7 @@ const Characters = () => {
           <p></p>
         )}
       </div>
-      <button onClick={handleNext} className="Dislike-button">
+      <button onClick={handleNext} className="dislike-button">
         <img className="tesmoche" src={buttonTesMoche} alt="Dislike" />{" "}
       </button>
       <button

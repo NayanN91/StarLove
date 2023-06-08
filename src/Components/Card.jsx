@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './Card.css';
+import React, { useState } from "react";
+import "./Card.css";
 
 const Card = (props) => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -10,11 +10,20 @@ const Card = (props) => {
 
   return (
     <div className="card-container">
-      <div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleClick}>
+      <div
+        className={`card ${isFlipped ? "flipped" : ""}`}
+        onClick={handleClick}
+      >
         <div className="front">
-          <div className="image" style={{ backgroundImage: `url(${props.image})`, backgroundSize: 'cover' }}></div>
+          <div
+            className="image"
+            style={{
+              backgroundImage: `url(${props.image})`,
+              backgroundSize: "cover",
+            }}
+          ></div>
           <h2 className="name">{props.name}</h2>
-          <p className="born">{props.born}</p>
+          <p className="born">naquit en l'an: {props.born}</p>
         </div>
         <div className="back">
           <h3 className="homeworld">Homeworld: {props.homeworld}</h3>
@@ -26,6 +35,6 @@ const Card = (props) => {
       </div>
     </div>
   );
-}
+};
 
 export default Card;
