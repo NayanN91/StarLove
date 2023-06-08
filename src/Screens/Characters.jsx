@@ -3,6 +3,7 @@ import Card from "../Components/card";
 import "./Characters.css"
 
 
+
 const Characters = () => {
   const [peoples, setPeoples] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
