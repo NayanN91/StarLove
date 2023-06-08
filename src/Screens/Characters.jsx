@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "../Components/card";
 
 const Characters = () => {
@@ -9,7 +8,7 @@ const Characters = () => {
   useEffect(() => {
     fetch("https://miadil.github.io/starwars-api/api/all.json")
       .then((res) => res.json())
-      .then((data) => setPeoples(data));
+      .then((res) => setPeoples(res));
   }, []);
 
   const handleNext = () => {
@@ -43,4 +42,5 @@ const Characters = () => {
 };
 
 export default Characters;
+
         
