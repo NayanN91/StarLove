@@ -21,7 +21,7 @@ const Characters = () => {
 
   return (
     <>
-      <div>
+      <div className="caracters-container">
         {peoples.length > 0 ? (
           <Card
             name={peoples[currentIndex].name}
@@ -35,8 +35,8 @@ const Characters = () => {
           <p></p>
         )}
       </div>
-      <button onClick={handleNext}>Next</button>
-      <button onClick={handleSecondNext}>Next (2nd)</button>
+      <button onClick={handleNext}>Dislike</button>
+      <button onClick={handleSecondNext}>Like</button>
     </>
   );
 };
