@@ -8,10 +8,7 @@
   background-color: transparent;
   font-size: 24px;
   cursor: pointer;
-}
-
-.tesmoche {
-  color: red;
+  width: 10vh;
 }
 
 .like-button {
@@ -24,8 +21,17 @@
   font-size: 24px;
   cursor: pointer;
   color: #fff;
+  width: 10vh;
 }
 
 .favorite-button.active {
   color: yellow;
+}
+
+.tesbeau {
+  width: 10vh;
+}
+
+.tesmoche {
+  width: 10vh;
 }

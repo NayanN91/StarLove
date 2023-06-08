@@ -30,7 +30,7 @@ const Characters = () => {
   };
 
   return (
-    <>
+    <div>
       <div className="caracters-container">
         {peoples.length > 0 ? (
           <Card
@@ -41,24 +41,27 @@ const Characters = () => {
             species={peoples[currentIndex].species}
             cybernetics={peoples[currentIndex].cybernetics}
             born={peoples[currentIndex].born}
+           
           />
         ) : (
           <p></p>
         )}
       </div>
-      <button onClick={handleNext} className="Dislike-button">
-        <img className="tesmoche" src={buttonTesMoche} alt="Dislike" />{" "}
-      </button>
-      <button
-        onClick={handleFavorite}
-        className={`favorite-button ${isFavorite ? "active" : ""}`}
-      >
-        <img className="tesbeau" src={buttonTesMagnifique} alt="superlike" />{" "}
-      </button>
-      <button onClick={handleSecondNext} className="like-button">
-        <img className="tesbeau" src={buttonTesBeau} alt="like" />{" "}
-      </button>
-    </>
+      <div className="allbuttons">
+        <button onClick={handleNext} className="dislike-button">
+          <img className="tesmoche" src={buttonTesMoche} alt="Dislike" />{" "}
+        </button>
+        <button
+          onClick={handleFavorite}
+          className={`favorite-button ${isFavorite ? "active" : ""}`}
+        >
+          <img className="tesbeau" src={buttonTesMagnifique} alt="superlike" />{" "}
+        </button>
+        <button onClick={handleSecondNext} className="like-button">
+          <img className="tesbeau" src={buttonTesBeau} alt="like" />{" "}
+        </button>
+      </div>
+    </div>
   );
 };
 
