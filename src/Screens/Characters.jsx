@@ -30,7 +30,7 @@ const Characters = () => {
   };
 
   return (
-    <div>
+    <div className="screencharacters">
       <div className="caracters-container">
         {peoples.length > 0 ? (
           <Card
@@ -42,7 +42,6 @@ const Characters = () => {
             cybernetics={peoples[currentIndex].cybernetics}
             born={peoples[currentIndex].born}
             homeworld={peoples[currentIndex].homeworld}
-
           />
         ) : (
           <p></p>
