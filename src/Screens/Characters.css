@@ -1,7 +1,3 @@
-* {
-  background-image: "";
-}
-
 .dislike-button,
 .like-button {
   border: none;
@@ -40,4 +36,12 @@
   position: relative;
   top: -14rem;
   left: 1rem;
+  background: transparent;
+}
+
+body {
+  background-image: url("/src/assets/backgroundcharacters.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
