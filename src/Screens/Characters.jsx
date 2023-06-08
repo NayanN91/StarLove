@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Card from "../Components/card";
-import "./Characters.css"
-
-
-
+import "./Characters.css";
+import buttonTesMoche from "../assets/buttonTesMoche.png";
+import buttonTesBeau from "../assets/buttonTesBeau.png";
+import buttonTesMagnifique from "../assets/buttonTesMagnifique.png";
 const Characters = () => {
   const [peoples, setPeoples] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -40,7 +40,6 @@ const Characters = () => {
             height={peoples[currentIndex].height}
             species={peoples[currentIndex].species}
             cybernetics={peoples[currentIndex].cybernetics}
-            born={peoples[currentIndex].born}
           />
         ) : (
           <p></p>
