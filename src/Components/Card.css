@@ -13,6 +13,7 @@
   transform-style: preserve-3d;
   transition: transform 0.8s;
   border-radius: 8px;
+ 
 }
 
 .card.flipped {
@@ -36,6 +37,7 @@
   justify-content: flex-end;
   align-items: flex-start;
   padding: 20px;
+
 }
 
 .back {
@@ -112,3 +114,26 @@
   display: block;
   bottom: 50px;
 }
+
+.homeworld {
+  color:white;
+};
+
+.height{
+  color: white;
+};
+
+.Height{
+  color: white;
+};
+
+.cyber{
+  color: white;
+};
+
+.genre{
+  color: white;
+};
+.espece{
+  color: white;
+};

@@ -42,6 +42,7 @@ const Characters = () => {
             cybernetics={peoples[currentIndex].cybernetics}
             born={peoples[currentIndex].born}
             homeworld={peoples[currentIndex].homeworld}
+
           />
         ) : (
           <p></p>
