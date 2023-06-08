@@ -9,8 +9,8 @@ const Card = (props) => {
   };
 
   return (
-    <div className="card-container" onClick={handleClick}>
-      <div className={`card ${isFlipped ? 'flipped' : ''}`}>
+    <div className="card-container">
+      <div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleClick}>
         <div className="front">
           <img src={props.image} alt={props.name} />
           <h2>{props.name}</h2>
