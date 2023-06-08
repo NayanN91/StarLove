@@ -1,40 +1,92 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
-
-
 .auth-page {
-    background-image: url(/src/assets/Images/backgroundLogWitchIcon.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    height: 100vh;
-    width: 100%;    
+  background-image: url(/src/assets/Images/backgroundLog2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 100vh;
+  width: 100%;
 }
 
-.inputuser {
-    background-color:#d8d1c7 ;
-    margin: 9px;
-    height: 25px;
-    border-radius: 24px;
-    width: 180px;
+.logo-container {
+  position: relative;
+  width: 100%;
 }
-button {
-    border-radius: 25px;
-    height: 31px;
-    width: 180px;
-    margin-top: 8px;
-    font-size: unset;
+
+.logo-container img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 form {
-    width: 350px;
-    height: auto;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  width: 27%;
+  position: absolute;
+  bottom: 15em;
+  right: 19em;
+}
+
+.inputContainer {
+  margin-bottom: 0.6em;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputContainerButton {
+  margin-bottom: 0.6em;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputuser {
+  border-radius: 2em;
+  padding: 1.2em;
+  border: none;
+  background-color: rgb(0 0 0 / 20%);
+  opacity: 121%;
+  width: 74%;
+  text-align: center;
+}
+
+.submitButton {
+  border-radius: 2em;
+  padding: 1.2em;
+  border: none;
+  background-color: #d9d9d9;
+  opacity: 121%;
+  width: 82%;
+  color: #000;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* .submitButton:hover {
+  background-color: #000;
+  color: #fff;
+} */
+
+.inputContainerButton svg {
+  display: none;
+}
+
+.inputuser:focus {
+  outline: none;
+}
+
+.inputuser::placeholder {
+  color: black;
+  font-weight: 900;
+}
+
+.forgetPasswordContainer {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
 }

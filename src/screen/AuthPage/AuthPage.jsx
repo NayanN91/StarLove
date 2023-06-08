@@ -1,12 +1,12 @@
 import { useState } from "react";
 import "./AuthPage.css";
-
+import Logo from "../../assets/Images/LogoSite.png";
 const AuthPage = ({ Authdata, setIsLogged }) => {
   const [formData, setFormData] = useState({
-    email: "",
+    username: "",
     password: "",
   });
-
+  console.log(formData);
   const [isEror, setIsError] = useState(false);
 
   const handleChange = (e) => {
@@ -19,9 +19,9 @@ const AuthPage = ({ Authdata, setIsLogged }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const { email, password } = formData;
+    const { username, password } = formData;
     const foundUser = Authdata.find(
-      (user) => user.email === email && user.password === password
+      (user) => user.username === username && user.password === password
     );
 
     if (foundUser) {
@@ -36,33 +36,53 @@ const AuthPage = ({ Authdata, setIsLogged }) => {
   };
 
   return (
-  
     <div className="auth-page">
+      <div className="logo-container">
+        <img src={Logo} alt="logo" />
+      </div>
       {isEror && (
         <p className="errorMessage">Erreur d&lsquo;authentification</p>
       )}
       <form onSubmit={handleSubmit}>
-          <input className="inputuser"
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="Nom d'utilisateur"
-          
-        />
+        <div className="inputContainer">
+          {/* <AiOutlineUser className="icon" /> */}
+          <input
+            className="inputuser"
+            type="text"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
+            placeholder="Nom d'utilisateur"
+          />
+        </div>
         <br />
-          <input className="inputuser"
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          placeholder="Mot de passe"
-        />
+        <div className="inputContainer">
+          {/* <RiLockPasswordFill className="icon" /> */}
+          <input
+            className="inputuser"
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            placeholder="Mot de passe"
+          />
+        </div>
         <br />
-        <button type="submit">Connexion</button>
-      <br /><a>Forgot password? </a>
-    <br/>
-    </form>
+        <div className="inputContainerButton">
+          <button className="submitButton">Inscription</button>
+        </div>
+        <br />
+        <div className="inputContainerButton">
+          <button className="submitButton">Connexion</button>
+        </div>
+        <br />
+        <div className="inputContainerButton">
+          <div className="forgetPasswordContainer">
+            <a>Mot de passe oublié ?</a>
+          </div>
+        </div>
+        <br />
+      </form>
     </div>
   );
 };
