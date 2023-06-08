@@ -1,7 +1,13 @@
-import "./App.css";
+import React from 'react';
+import Inscription from './Components/Inscription';
+
 
 function App() {
-  return <></>;
-}
-
-export default App;
+  return (<>
+    <Inscription />
+  </>
+   );
+  }
+  
+  export default App;
+  
