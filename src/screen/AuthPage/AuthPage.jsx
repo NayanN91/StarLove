@@ -36,6 +36,7 @@ const AuthPage = ({ Authdata, setIsLogged }) => {
   };
 
   return (
+  
     <div className="auth-page">
       {isEror && (
         <p className="errorMessage">Erreur d&lsquo;authentification</p>
@@ -48,6 +49,7 @@ const AuthPage = ({ Authdata, setIsLogged }) => {
           value={formData.email}
           onChange={handleChange}
           placeholder="Nom d'utilisateur"
+          
         />
         <br />
         <label></label>
@@ -60,7 +62,9 @@ const AuthPage = ({ Authdata, setIsLogged }) => {
         />
         <br />
         <button type="submit">Connexion</button>
-      </form>
+      <br /><a>Forgot password? </a>
+    <br/>
+    </form>
     </div>
   );
 };
