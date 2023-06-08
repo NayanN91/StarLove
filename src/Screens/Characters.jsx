@@ -41,7 +41,7 @@ const Characters = () => {
   };
 
   return (
-    <div>
+    <div className="screencharacters">
       <div
         className={`card-container ${
           isSwipeLeft ? "swipe-left transition" : ""
@@ -70,11 +70,7 @@ const Characters = () => {
           onClick={handleFavorite}
           className={`favorite-button ${isFavorite ? "active" : ""}`}
         >
-          <img
-            className="tesbeau"
-            src={buttonTesMagnifique}
-            alt="superlike"
-          />{" "}
+          <img className="tesbeau" src={buttonTesMagnifique} alt="superlike" />{" "}
         </button>
         <button onClick={handleSecondNext} className="like-button">
           <img className="tesbeau" src={buttonTesBeau} alt="like" />{" "}

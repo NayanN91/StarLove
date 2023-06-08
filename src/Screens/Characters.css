@@ -1,14 +1,10 @@
-* {
-  background-image: "";
-}
-
 .dislike-button,
 .like-button {
   border: none;
   background-color: transparent;
   font-size: 24px;
   cursor: pointer;
-  width: 10vh;
+  width: 7vh;
 }
 
 .like-button {
@@ -21,7 +17,7 @@
   font-size: 24px;
   cursor: pointer;
   color: #fff;
-  width: 10vh;
+  width: 7vh;
 }
 
 .favorite-button.active {
@@ -29,17 +25,30 @@
 }
 
 .tesbeau {
-  width: 10vh;
+  width: 7vh;
 }
 
 .tesmoche {
-  width: 10vh;
+  width: 7vh;
 }
 
 .allbuttons {
   position: relative;
   top: -14rem;
   left: 1rem;
+  background: transparent;
+}
+
+.screencharacters {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/src/assets/backgroundcharacters.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card-container.swipe-left {
