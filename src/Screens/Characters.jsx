@@ -4,10 +4,13 @@ import "./Characters.css";
 import buttonTesMoche from "../assets/buttonTesMoche.png";
 import buttonTesBeau from "../assets/buttonTesBeau.png";
 import buttonTesMagnifique from "../assets/buttonTesMagnifique.png";
+
 const Characters = () => {
   const [peoples, setPeoples] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFavorite, setIsFavorite] = useState(false);
+  const [isSwipeLeft, setIsSwipeLeft] = useState(false);
+  const [isSwipeRight, setIsSwipeRight] = useState(false);
 
   useEffect(() => {
     fetch("https://miadil.github.io/starwars-api/api/all.json")
@@ -16,13 +19,21 @@ const Characters = () => {
   }, []);
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % peoples.length);
-    setIsFavorite(false);
+    setIsSwipeLeft(true);
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % peoples.length);
+      setIsSwipeLeft(false);
+      setIsFavorite(false);
+    }, 800);
   };
 
   const handleSecondNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % peoples.length);
-    setIsFavorite(false);
+    setIsSwipeRight(true);
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % peoples.length);
+      setIsSwipeRight(false);
+      setIsFavorite(false);
+    }, 800);
   };
 
   const handleFavorite = () => {
@@ -30,8 +41,12 @@ const Characters = () => {
   };
 
   return (
-    <div className="screencharacters">
-      <div className="caracters-container">
+    <div>
+      <div
+        className={`card-container ${
+          isSwipeLeft ? "swipe-left transition" : ""
+        } ${isSwipeRight ? "swipe-right transition" : ""}`}
+      >
         {peoples.length > 0 ? (
           <Card
             name={peoples[currentIndex].name}

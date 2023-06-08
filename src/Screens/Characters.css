@@ -50,3 +50,17 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.card-container.swipe-left {
+  transform: translateX(-100%);
+  transition: transform 0.8s ease;
+}
+
+.card-container.swipe-right {
+  transform: translateX(100%);
+  transition: transform 0.8s ease;
+}
+
+.card-container.transition {
+  transition: transform 0.8s;
+}
