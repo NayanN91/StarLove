@@ -1,14 +1,12 @@
 import { useState } from "react";
 import "./AuthPage.css";
-import { AiOutlineUser } from "react-icons/ai";
-import { RiLockPasswordFill } from "react-icons/ri";
-
+import Logo from "../../assets/Images/LogoSite.png";
 const AuthPage = ({ Authdata, setIsLogged }) => {
   const [formData, setFormData] = useState({
-    email: "",
+    username: "",
     password: "",
   });
-
+  console.log(formData);
   const [isEror, setIsError] = useState(false);
 
   const handleChange = (e) => {
@@ -21,9 +19,9 @@ const AuthPage = ({ Authdata, setIsLogged }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const { email, password } = formData;
+    const { username, password } = formData;
     const foundUser = Authdata.find(
-      (user) => user.email === email && user.password === password
+      (user) => user.username === username && user.password === password
     );
 
     if (foundUser) {
@@ -39,29 +37,32 @@ const AuthPage = ({ Authdata, setIsLogged }) => {
 
   return (
     <div className="auth-page">
+      <div className="logo-container">
+        <img src={Logo} alt="logo" />
+      </div>
       {isEror && (
         <p className="errorMessage">Erreur d&lsquo;authentification</p>
       )}
       <form onSubmit={handleSubmit}>
         <div className="inputContainer">
-          <AiOutlineUser className="icon" />
+          {/* <AiOutlineUser className="icon" /> */}
           <input
             className="inputuser"
             type="text"
-            name="email"
-            value={formData.email}
+            name="username"
+            value={formData.username}
             onChange={handleChange}
             placeholder="Nom d'utilisateur"
           />
         </div>
         <br />
         <div className="inputContainer">
-          <RiLockPasswordFill className="icon" />
+          {/* <RiLockPasswordFill className="icon" /> */}
           <input
             className="inputuser"
             type="password"
             name="password"
-            value={formData.email}
+            value={formData.password}
             onChange={handleChange}
             placeholder="Mot de passe"
           />
@@ -77,7 +78,7 @@ const AuthPage = ({ Authdata, setIsLogged }) => {
         <br />
         <div className="inputContainerButton">
           <div className="forgetPasswordContainer">
-            <a>Mot de passe oublié</a>
+            <a>Mot de passe oublié ?</a>
           </div>
         </div>
         <br />

@@ -7,16 +7,28 @@
   width: 100%;
 }
 
+.logo-container {
+  position: relative;
+  width: 100%;
+}
+
+.logo-container img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
 form {
   display: flex;
   flex-direction: column;
-  width: 17%;
+  width: 27%;
   position: absolute;
-  bottom: 25em;
-  right: 28em;
+  bottom: 15em;
+  right: 19em;
 }
 
 .inputContainer {
+  margin-bottom: 0.6em;
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -25,36 +37,34 @@ form {
 }
 
 .inputContainerButton {
+  margin-bottom: 0.6em;
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
   align-items: center;
-}
-
-.inputContainer svg {
-  font-size: 1.4em;
-  position: relative;
-  left: 30px;
+  
+  
+  
 }
 
 .inputuser {
   border-radius: 2em;
-  padding: 0.6em;
+  padding: 1.2em;
   border: none;
   background-color: rgb(0 0 0 / 20%);
   opacity: 121%;
-  width: 70%;
+  width: 74%;
+  text-align: center;
 }
 
 .submitButton {
   border-radius: 2em;
-  padding: 0.6em;
+  padding: 1.2em;
   border: none;
   background-color: #d9d9d9;
   opacity: 121%;
-  width: 70%;
-  margin-left: 2em;
+  width: 82%;
   color: #000;
   font-weight: 900;
   cursor: pointer;
@@ -76,7 +86,6 @@ form {
 .inputuser::placeholder {
   color: black;
   font-weight: 900;
-  padding-left: 3em;
 }
 
 .forgetPasswordContainer {
