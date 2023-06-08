@@ -1,0 +1,27 @@
+.dislike-button,
+.like-button {
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dislike-button {
+  color: red;
+}
+
+.like-button {
+  color: hotpink;
+}
+
+.favorite-button {
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .favorite-button.active {
+    color: yellow;
+  }
