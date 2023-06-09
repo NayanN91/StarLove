@@ -44,6 +44,7 @@
   justify-content: center;
   align-items: center;
   background-color: #252222;
+  box-sizing: border-box;
 }
 
 .card-container .front {
@@ -70,13 +71,15 @@
 }
 
 .card-container .back h3 {
-  font-size: 12px;
+  margin-top: 48px;
+  font-size: 18px;
   color: white;
   width: 100%;
   height: 50px;
   text-align: left;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  text-align: center;
+ margin-left: 48px;
+ font-weight: lighter;
 }
 
 .card-container .back p {
@@ -87,7 +90,8 @@
   height: 50px;
   text-align: left;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  text-align: center;
+  margin-left: 48px;
+  word-wrap: break-word; 
 }
 
 .imageContainer {
@@ -128,18 +132,46 @@
   width: 100%;
   height: 70px;
   text-align: left;
+  margin-left: 48px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin-top: -20px;
-  text-align: center;
+  
 }
 
 .homeworldback {
   font-size: 18px;
   margin-top: 0px;
-  margin-bottom: 2px;
-  text-align: center;
+  margin-bottom: 4px;
+  text-align: left;
+  margin-left: 0px;
   color: white;
-  width: 100%;
+  width: calc(100% - 48px);
   height: 50px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border-bottom: 1px solid white;
+}
+
+
+.card-container .back .cyber {
+  margin-bottom : 15px;
+  overflow-wrap: break-word;
+}
+
+
+
+
+
+.card-container .back .hobby {
+
+  font-size: 18px;
+  margin-top: -20px;
+  margin-bottom: 4px;
+  text-align: left;
+  margin-left: 0px;
+  color: white;
+  width: calc(100% - 48px); 
+  height: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border-top: 1px solid white;
+
 }

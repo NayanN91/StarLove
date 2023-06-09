@@ -29,7 +29,8 @@ const Card = (props) => {
           {" "}
           Je suis un(e) {props.gender} {props.species}
         </p>
-        <p className="cyber"> Cybernetics: {props.cybernetics}</p>
+        <p className="cyber">  {props.cybernetics} </p>
+        <p className="hobby" > j'adore les virées romantiques à travers l'hyperespace, et les diners aux chandelles sur la bordure exterieure </p>
       </div>
     </div>
   );
