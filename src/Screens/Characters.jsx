@@ -47,7 +47,7 @@ const Characters = () => {
           isSwipeLeft ? "swipe-left transition" : ""
         } ${isSwipeRight ? "swipe-right transition" : ""}`}
       >
-        {peoples.length > 0 ? (
+        {peoples.length > 0 && (
           <Card
             name={peoples[currentIndex].name}
             image={peoples[currentIndex].image}
@@ -58,23 +58,27 @@ const Characters = () => {
             born={peoples[currentIndex].born}
             homeworld={peoples[currentIndex].homeworld}
           />
-        ) : (
-          <p></p>
         )}
       </div>
-      <div className="allbuttons">
-        <button onClick={handleNext} className="dislike-button">
-          <img className="tesmoche" src={buttonTesMoche} alt="Dislike" />{" "}
-        </button>
-        <button
-          onClick={handleFavorite}
-          className={`favorite-button ${isFavorite ? "active" : ""}`}
-        >
-          <img className="tesbeau" src={buttonTesMagnifique} alt="superlike" />{" "}
-        </button>
-        <button onClick={handleSecondNext} className="like-button">
-          <img className="tesbeau" src={buttonTesBeau} alt="like" />{" "}
-        </button>
+      <div className="allbuttonscontainers">
+        <div className="allbuttons">
+          <button onClick={handleNext} className="dislike-button">
+            <img className="tesmoche" src={buttonTesMoche} alt="Dislike" />{" "}
+          </button>
+          <button
+            onClick={handleFavorite}
+            className={`favorite-button ${isFavorite ? "active" : ""}`}
+          >
+            <img
+              className="tesbeau"
+              src={buttonTesMagnifique}
+              alt="superlike"
+            />{" "}
+          </button>
+          <button onClick={handleSecondNext} className="like-button">
+            <img className="tesbeau" src={buttonTesBeau} alt="like" />{" "}
+          </button>
+        </div>
       </div>
     </div>
   );
