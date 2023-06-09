@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Card from "../../Components/card";
+import Card from "../../Components/Card/Card";
 import buttonTesMoche from "../../assets/Images/buttonTesMoche.png";
 import buttonTesBeau from "../../assets/Images/buttonTesBeau.png";
 import buttonTesMagnifique from "../../assets/Images/buttonTesMagnifique.png";
