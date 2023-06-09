@@ -2,7 +2,9 @@ import { useState } from "react";
 import AuthPage from "./screen/AuthPage/AuthPage";
 import Home from "./screen/Home/Home";
 import Authdata from "../src/data/AuthData.json";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import Characters from "./Screens/Characters";
 
 
 
@@ -16,8 +18,11 @@ function App() {
           <Home setIsLogged={setIsLogged} />
         ) : (
           <AuthPage Authdata={Authdata} setIsLogged={setIsLogged} />
-        )}
-      </div>
+          )}
+          </div>
+      <Routes>
+        <Route path="/characters" element={<Characters />} />
+      </Routes>
     </>
   );
 }
