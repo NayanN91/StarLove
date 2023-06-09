@@ -27,11 +27,11 @@
   height: 100%;
   backface-visibility: hidden;
   border-radius: 8px;
-  background-color: black;
+  background-color: #252222;
 }
 
 .front {
-  background-color: black;
+  background-color: #252222;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -54,7 +54,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: black;
+  background-color: #252222;
 }
 
 .card-container .front h2,
@@ -76,7 +76,7 @@
 .card-container .back h3 {
   font-size: 12px;
 margin: 0.2px;
-background-color: black;
+background-color: #252222;
 color: white;
 width: 100%;
 height: 50px;
@@ -87,7 +87,7 @@ text-align: left;
 .card-container .back p {
   font-size: 18px;
   margin: 2px;
-  background-color: black;
+  background-color: #252222;
   color: white;
   width: 100%;
   height: 50px;
@@ -129,7 +129,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
 .nameback {
   font-size: 18px;
   margin-bottom: 0px;
-  background-color: black;
+  background-color: #252222;
   color: white;
   width: 100%;
   height: 50px;
@@ -141,7 +141,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
   font-size: 18px;
   margin-top: 0px;
   margin-bottom: 2px;
-  background-color: black;
+  background-color: #252222;
   color: white;
   width: 100%;
   height: 50px;
