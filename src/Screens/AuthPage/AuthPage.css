@@ -98,3 +98,7 @@ form {
   flex-direction: column;
   width: 70%;
 }
+
+a {
+  text-decoration: none;
+}
