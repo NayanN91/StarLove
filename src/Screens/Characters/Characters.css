@@ -37,10 +37,7 @@
   top: -14rem;
   left: 1rem;
   background: transparent;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 1em;
-  width: 20%;
+  margin-left: 850px;
 }
 
 .screencharacters {
@@ -67,10 +64,4 @@
 
 .card-container.transition {
   transition: transform 0.8s;
-}
-.allbuttonscontainers {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
