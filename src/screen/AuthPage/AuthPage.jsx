@@ -1,6 +1,9 @@
 import { useState } from "react";
-import "./AuthPage.css";
 import Logo from "../../assets/Images/LogoSite.png";
+import "./AuthPage.css";
+
+
+
 const AuthPage = ({ Authdata, setIsLogged }) => {
   const [formData, setFormData] = useState({
     username: "",
