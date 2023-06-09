@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Card from "../Components/card";
+import Card from "../../Components/card";
+import buttonTesMoche from "../../assets/Images/buttonTesMoche.png";
+import buttonTesBeau from "../../assets/Images/buttonTesBeau.png";
+import buttonTesMagnifique from "../../assets/Images/buttonTesMagnifique.png";
 import "./Characters.css";
-import buttonTesMoche from "../assets/buttonTesMoche.png";
-import buttonTesBeau from "../assets/buttonTesBeau.png";
-import buttonTesMagnifique from "../assets/buttonTesMagnifique.png";
 
 const Characters = () => {
   const [peoples, setPeoples] = useState([]);
