@@ -13,9 +13,9 @@ const handleShowLinks = () =>{
 console.log(showLinks)
 
   return(
-    <nav className='navbar' >
+    <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
       <div className="navbar_logo">Logo</div>
-      <ul className={"navbar_links"}>
+      <ul className= "navbar_links">
         <li className="navbar_item">
           <a href="#" className="navbar_link">
             Acceuil
