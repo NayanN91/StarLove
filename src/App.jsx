@@ -1,8 +1,6 @@
 
 import React from 'react';
-import Inscription from './Components/Inscription';
-
-=======
+import Inscription from './components/Inscription/Inscription';
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import AuthPage from "./Screens/AuthPage/AuthPage";
@@ -17,20 +15,26 @@ function App() {
 
   return (
     <>
+    
       <div className="App">
         {isLogged ? (
-          <Characters setIsLogged={setIsLogged} />
+        <Routes>
+        <Route path="/" element={<Characters />} />
+        </Routes>
         ) : (
-          <AuthPage Authdata={Authdata} setIsLogged={setIsLogged} />
-          )}
+            <Routes>
+              <Route path='/' element={<AuthPage  Authdata={Authdata} setIsLogged={setIsLogged}/>} />
+              <Route path="/inscription" element={<Inscription />} />
+          </Routes>
+        )}
+      
           </div>
-      <Routes>
-        <Route path="./" element={<AuthPage />} />
-        <Route path="/characters" element={<Characters />} />
-      </Routes>
+
     </>
   );
 }
+ export default App;
+
 
 
   
