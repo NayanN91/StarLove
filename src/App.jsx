@@ -5,6 +5,7 @@ import { useState } from "react";
 import AuthPage from "./Screens/AuthPage/AuthPage";
 import Characters from "./Screens/Characters/Characters";
 import Authdata from "../src/data/AuthData.json";
+import Navbar from "./Components/NavBar/NavBar";
 import "./App.css";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <>
+   
       <div className="App">
         {isLogged ? (
           <Routes>
@@ -24,10 +26,12 @@ function App() {
               element={
                 <AuthPage Authdata={Authdata} setIsLogged={setIsLogged} />
               }
+              
             />
             <Route path="/inscription" element={<Inscription />} />
           </Routes>
         )}
+         <Navbar />
       </div>
     </>
   );
