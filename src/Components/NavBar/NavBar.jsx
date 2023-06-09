@@ -32,11 +32,10 @@ const Navbar = ({ setIsLogged }) => {
             Services
           </a>
         </li>
-        <Link to={"/AuthPage"}>
+        
           <li className="navbar_logout">
             <button onClick={handleLogout}>Déconnexion</button>
           </li>
-        </Link>
       </ul>
       <button className="navbar_burger" onClick={handleShowLinks}>
         <span className="burger-bar"></span>
