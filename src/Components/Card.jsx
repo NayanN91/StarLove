@@ -11,13 +11,9 @@ const Card = (props) => {
   return (
     <div className={`card ${isFlipped ? "flipped" : ""}`} onClick={handleClick}>
       <div className="front">
-        <div
-          className="image"
-          style={{
-            backgroundImage: `url(${props.image})`,
-            backgroundSize: "cover",
-          }}
-        ></div>
+        <div className="imageContainer">
+          <img src={props.image} alt={props.name} />
+        </div>
         <h2 className="name">{props.name}</h2>
         <p className="homeworld"> {props.homeworld} </p>
       </div>
