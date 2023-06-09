@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./NavBar.css";
 import { useState } from "react";
 
-const Navbar = ({ setIsLogged }) => {
+const Navbar = ({ setIsLogged, isLogged }) => {
   const handleLogout = () => {
     setIsLogged(false);
     handleShowLinks();
@@ -34,11 +34,13 @@ const Navbar = ({ setIsLogged }) => {
             Services
           </Link>
         </li>
-        <li className="navbar_logout">
-          <Link to={"/"} className="navbar_link" onClick={handleLogout}>
-            Déconnexion
-          </Link>
-        </li>
+        {isLogged && (
+          <li className="navbar_logout">
+            <Link to={"/"} className="navbar_link" onClick={handleLogout}>
+              Déconnexion
+            </Link>
+          </li>
+        )}
       </ul>
       <button className="navbar_burger" onClick={handleShowLinks}>
         <span className="burger-bar"></span>

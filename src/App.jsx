@@ -34,7 +34,7 @@ function App() {
             </Routes>
           </>
         )}
-        <Navbar setIsLogged={setIsLogged} />
+        <Navbar setIsLogged={setIsLogged} isLogged={isLogged} />
       </div>
     </>
   );
