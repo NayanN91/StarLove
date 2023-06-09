@@ -11,6 +11,20 @@
     height: 100vh;
 
   }
+
+
+  .container {
+    /* Styles du conteneur du formulaire */
+    background-image: url("./Images/Components/img-font.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+
+
+
+
+
   
   form {
     width: 500px;
@@ -61,9 +75,6 @@ input {
     border: 1px solid #4caf50;
 
    
-
-
-
   }
 
   button:hover {
@@ -83,7 +94,7 @@ label {
     color: #4caf50;
     cursor: pointer;
     text-transform: uppercase;
-    
+
 }
  
 
