@@ -1,8 +1,6 @@
 
 import React from 'react';
 import Inscription from './Components/Inscription';
-
-=======
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import AuthPage from "./Screens/AuthPage/AuthPage";
