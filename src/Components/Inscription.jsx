@@ -32,6 +32,7 @@
         un élément <input> est créé. Chaque champ est lié à une variable d'état correspondante,
          et lorsqu'une valeur est saisie dans le champ, la fonction onChange est appelée pour
           mettre à jour la variable d'état avec la nouvelle valeur.*/}
+          <div className="container">   
          <h2>Inscription</h2>
          <form onSubmit={handleSubmit}>
            <div>
@@ -75,6 +76,8 @@
             Lorsqu'il est cliqué, le formulaire est soumis et la fonction handleSubmit est appelée. */}
            <button type="submit">Inscription</button>
          </form>
+       </div>
+
        </div>
      );
    };

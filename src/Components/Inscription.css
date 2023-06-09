@@ -15,7 +15,7 @@
 
   .container {
     /* Styles du conteneur du formulaire */
-    background-image: url("./Images/Components/img-font.jpg");
+    background-image: url("./assets/images/img-font.jpg");
     background-size: cover;
     background-position: center;
   }
