@@ -14,6 +14,7 @@
   
   form {
     width: 500px;
+    padding: 5em;
   }
  /* 
   input {
@@ -52,19 +53,49 @@ input {
     background-color: #4caf50;
     color: white;
     padding: 20px;
-    border: none;
+  /*  border: none;*/
     cursor: pointer;
     border-radius: 5px;
 
     transition: background-color 0.3s, color 0.3s; /* Ajout de la transition */
-    
+    border: 1px solid #4caf50;
+
+   
+
+
+
   }
 
   button:hover {
      /* Styles lorsqu'il est survolé */
   background-color: #ffffff; /* Couleur de fond blanche */
   color: #4caf50; /* Couleur du texte verte */
+
+
+  transform: scale(1.1); /* Agrandissement du bouton */
   }
+
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #4caf50;
+    cursor: pointer;
+    text-transform: uppercase;
+    
+}
+ 
+
+
+
+
+
+
+
+
+
+
 
 
   

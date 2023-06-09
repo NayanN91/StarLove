@@ -1,7 +1,4 @@
-
-
-
-   import React, { useState } from "react";
+  import React, { useState } from "react";
    //Importation des dépendances : Le code commence par importer le fichier de styles CSS requis pour le composant.
    import "./Inscription.css";
 
