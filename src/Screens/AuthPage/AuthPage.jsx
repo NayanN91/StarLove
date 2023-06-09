@@ -3,8 +3,6 @@ import Logo from "../../assets/Images/LogoSite.png";
 import "./AuthPage.css";
 import { Link } from "react-router-dom";
 
-
-
 const AuthPage = ({ Authdata, setIsLogged }) => {
   const [formData, setFormData] = useState({
     username: "",
@@ -44,11 +42,13 @@ const AuthPage = ({ Authdata, setIsLogged }) => {
       <div className="logo-container">
         <img src={Logo} alt="logo" />
       </div>
-      
+
       <form onSubmit={handleSubmit}>
-      {isEror && (
-        <div className="errorMessageContainer"><p className="errorMessage">Erreur d&lsquo;authentification</p></div>
-      )}
+        {isEror && (
+          <div className="errorMessageContainer">
+            <p className="errorMessage">Erreur d&lsquo;authentification</p>
+          </div>
+        )}
         <div className="inputContainer">
           {/* <AiOutlineUser className="icon" /> */}
           <input
@@ -73,16 +73,16 @@ const AuthPage = ({ Authdata, setIsLogged }) => {
           />
         </div>
         <br />
-          <Link to={"/inscription"}>
-        <div className="inputContainerButton">
-            <button className="submitButton">Inscription</button>
-        </div>
-          </Link>
         <br />
         <div className="inputContainerButton">
           <button className="submitButton">Connexion</button>
         </div>
         <br />
+        <Link to={"/inscription"}>
+          <div className="inputContainerButton">
+            <button className="submitButton">Inscription</button>
+          </div>
+        </Link>
         <div className="inputContainerButton">
           <div className="forgetPasswordContainer">
             <a>Mot de passe oublié ?</a>
