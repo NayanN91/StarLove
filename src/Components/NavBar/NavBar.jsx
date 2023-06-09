@@ -5,6 +5,7 @@ import { useState } from "react";
 const Navbar = ({ setIsLogged }) => {
   const handleLogout = () => {
     setIsLogged(false);
+    handleShowLinks();
   };
 
   const [showLinks, setShowLinks] = useState(false);
@@ -16,27 +17,28 @@ const Navbar = ({ setIsLogged }) => {
   return (
     <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
       <div className="LogoBan">
-        <img
-          src="src\assets\LogoNavBarResize.png"
-          alt="Logo Adopte un Jedi"
-        />
+        <img src="src\assets\LogoNavBarResize.png" alt="Logo Adopte un Jedi" />
       </div>
       <ul className="navbar_links">
         <li className="navbar_item">
-          <a href="" className="navbar_link">
+          <Link to="/" className="navbar_link" onClick={handleShowLinks}>
             Acceuil
-          </a>
+          </Link>
         </li>
         <li className="navbar_item">
-          <a href="#" className="navbar_link">
+          <Link
+            to="/services"
+            className="navbar_link"
+            onClick={handleShowLinks}
+          >
             Services
-          </a>
+          </Link>
         </li>
-          <li className="navbar_logout">
-          <a href="" className="navbar_link">
+        <li className="navbar_logout">
+          <Link to={"/"} className="navbar_link" onClick={handleLogout}>
             Déconnexion
-          </a>
-          </li>
+          </Link>
+        </li>
       </ul>
       <button className="navbar_burger" onClick={handleShowLinks}>
         <span className="burger-bar"></span>

@@ -7,34 +7,36 @@ import Characters from "./Screens/Characters/Characters";
 import Authdata from "../src/data/AuthData.json";
 import Navbar from "./Components/NavBar/NavBar";
 import "./App.css";
+import ComingSoon from "./Screens/ComingSoon/ComingSoon";
 
 function App() {
   const [isLogged, setIsLogged] = useState(false);
 
   return (
     <>
-   
       <div className="App">
         {isLogged ? (
           <Routes>
             <Route path="/" element={<Characters />} />
+            <Route path="/services" element={<ComingSoon />} />
           </Routes>
         ) : (
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <AuthPage Authdata={Authdata} setIsLogged={setIsLogged} />
-              }
-              
-            />
-            <Route path="/inscription" element={<Inscription />} />
-          </Routes>
+          <>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <AuthPage Authdata={Authdata} setIsLogged={setIsLogged} />
+                }
+              />
+              <Route path="/inscription" element={<Inscription />} />
+              <Route path="/services" element={<ComingSoon />} />
+            </Routes>
+          </>
         )}
-         <Navbar />
+        <Navbar setIsLogged={setIsLogged} />
       </div>
     </>
   );
 }
 export default App;
-
