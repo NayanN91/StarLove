@@ -32,9 +32,10 @@ const Navbar = ({ setIsLogged }) => {
             Services
           </a>
         </li>
-        
           <li className="navbar_logout">
-            <button onClick={handleLogout}>Déconnexion</button>
+          <a href="" className="navbar_link">
+            Déconnexion
+          </a>
           </li>
       </ul>
       <button className="navbar_burger" onClick={handleShowLinks}>
