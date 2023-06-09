@@ -2,22 +2,15 @@
 .like-button {
   border: none;
   background-color: transparent;
-  font-size: 24px;
   cursor: pointer;
-  width: 7vh;
-}
-
-.like-button {
-  color: hotpink;
 }
 
 .favorite-button {
   border: none;
   background-color: transparent;
-  font-size: 24px;
+
   cursor: pointer;
   color: #fff;
-  width: 7vh;
 }
 
 .favorite-button.active {
@@ -33,11 +26,10 @@
 }
 
 .allbuttons {
-  position: relative;
-  top: -14rem;
-  left: 1rem;
-  background: transparent;
-  margin-left: 850px;
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .screencharacters {
