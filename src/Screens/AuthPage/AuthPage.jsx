@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Logo from "../../assets/Images/LogoSite.png";
 import "./AuthPage.css";
+import { Link } from "react-router-dom";
 
 
 
@@ -72,9 +73,11 @@ const AuthPage = ({ Authdata, setIsLogged }) => {
           />
         </div>
         <br />
+          <Link to={"/inscription"}>
         <div className="inputContainerButton">
-          <button className="submitButton">Inscription</button>
+            <button className="submitButton">Inscription</button>
         </div>
+          </Link>
         <br />
         <div className="inputContainerButton">
           <button className="submitButton">Connexion</button>
